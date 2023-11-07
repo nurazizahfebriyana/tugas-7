@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 class MyHomePage extends StatelessWidget {
     MyHomePage({Key? key}) : super(key: key);
     final List<ShopItem> items = [
-    ShopItem("Lihat Produk", Icons.checklist),
-    ShopItem("Tambah Produk", Icons.add_shopping_cart),
+    ShopItem("Lihat Item", Icons.checklist),
+    ShopItem("Tambah Item", Icons.add_shopping_cart),
     ShopItem("Logout", Icons.logout),
-    ];
+];
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
@@ -89,7 +89,7 @@ class ShopCard extends StatelessWidget {
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
-                content: Text("Kamu telah menekan tombol ${item.name}!")));
+                content: Text("Kamu telah menekan tombol ${item.name}")));
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
