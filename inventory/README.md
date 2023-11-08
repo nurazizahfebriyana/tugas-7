@@ -64,3 +64,20 @@ Jawab :
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!"))); // pesannya
         },
+
+5. Bonus :
+    -menambahkan kode berikut :
+    Color backgroundColor;
+
+    if (item.name == "Lihat Produk") {
+      backgroundColor = Colors.blue;
+    } else if (item.name == "Tambah Produk") {
+      backgroundColor = Colors.green;
+    } else if (item.name == "Login") {
+      backgroundColor = Colors.orange;
+    } else {
+      backgroundColor = Colors.indigo;
+    }
+    dan
+    return Material(
+      color: backgroundColor 
