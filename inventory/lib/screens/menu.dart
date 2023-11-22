@@ -5,9 +5,10 @@ import 'package:inventory/widgets/shop_card.dart';
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
   final List<ShopItem> items = [
-    ShopItem("Lihat Produk", Icons.checklist),
-    ShopItem("Tambah Produk", Icons.add_shopping_cart),
-    ShopItem("Login", Icons.login),
+    ShopItem("Lihat Item", Icons.checklist, Color.fromARGB(255, 164, 123, 221)),
+    ShopItem("Tambah Item", Icons.add_shopping_cart, Color.fromARGB(255, 203, 82, 222)),
+    ShopItem("Logout", Icons.login, Color.fromARGB(255, 246, 125, 225)),
+
   ];
 
   @override
@@ -17,6 +18,8 @@ class MyHomePage extends StatelessWidget {
         title: const Text(
           'Inventory',
         ),
+        backgroundColor: Color.fromARGB(255, 166, 1, 160),
+        foregroundColor: Color.fromARGB(255, 255, 225, 255),
       ),
       drawer: const LeftDrawer(),
       body: SingleChildScrollView(

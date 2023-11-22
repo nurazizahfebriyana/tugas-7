@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventory/screens/list_product.dart';
 import 'package:inventory/screens/menu.dart';
 import 'package:inventory/screens/shoplist_form.dart';
 
@@ -27,7 +28,7 @@ class LeftDrawer extends StatelessWidget {
                     ),
                 ),
                 Padding(padding: EdgeInsets.all(10)),
-                Text("Catat seluruh keperluan belanjamu di sini!",
+                Text("Catat Wishlist K-Merch Anda!",
                     // TODO: Tambahkan gaya teks dengan center alignment, font ukuran 15, warna putih, dan weight biasa
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -68,6 +69,17 @@ class LeftDrawer extends StatelessWidget {
                     ));
             },
             ),
+            ListTile(
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Item'),
+            onTap: () {
+                // Route menu ke halaman produk
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+                );
+            },
+        ),
         ],
       ),
     );
